@@ -1,0 +1,49 @@
+#include<stdio.h>
+
+void main()
+{
+	register int i;
+	float q1,q2,q3,q4,q5,syr,eyr;
+	float r1,r2,r3,r4,r5;
+	printf("Enter start year of projection : ");
+	scanf("%f",&syr);
+	printf("Enter end year of projection: ");
+	scanf("%f",&eyr);
+	printf("Enter comodity1 base quantity :");
+	scanf("%f",&q1);
+	printf("Enter comodity1 CAGR rate :");
+	scanf("%f",&r1);
+	printf("Enter comodity2 base quantity :");
+	scanf("%f",&q2);
+	printf("Enter comodity2 CAGR rate :");
+	scanf("%f",&r2);
+	printf("Enter comodity3 base quantity :");
+	scanf("%f",&q3);
+	printf("Enter comodity3 CAGR rate :");
+	scanf("%f",&r3);
+	printf("Enter comodity4 base quantity :");
+	scanf("%f",&q4);
+	printf("Enter comodity4 CAGR rate :");
+	scanf("%f",&r4);
+	printf("Enter comodity5 base quantity :");
+	scanf("%f",&q5);
+	printf("Enter comodity5 CAGR rate :");
+	scanf("%f",&r5);
+	printf("Year\t\tcomodity1\tcomodity2\tcomodity3\tcomodity4\tcomodity5\n");
+	for(i=syr;i<=eyr;i++)
+	{
+		float c1=q1+(q1*r1/100);
+		q1=c1;
+		float c2=q2+(q2*r2/100);
+		q2=c2;
+		float c3=q3+(q3*r3/100);
+		q3=c3;
+		float c4=q4+(q4*r4/100);
+		q4=c4;
+		float c5=q5+(q5*r5/100);
+		q5=c5;
+		
+		printf("Year %d\t%d\t%d\t%d\t%d\t%d\t\n",(int)i,(int)c1,(int)c2,(int)c3,(int)c4,(int)c5);
+		
+	}
+}
